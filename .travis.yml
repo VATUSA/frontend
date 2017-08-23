@@ -1,17 +1,20 @@
 language: node_js
 node_js:
-  - 8
+- 8
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run lint
-  - npm run test
-  - npm run build
-
+- npm run lint
+- npm run test
+- npm run build
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: "/bin/sh deploy.sh"
+  provider: s3
+  access_key_id: AKIAJRQLADC2IU5GC7QQ
+  secret_access_key:
+    secure: XXnhBgh8BBWVO7Qz3EjhtuYgBWPtKxymfsCZ9eaBsNTN4GY6ZDC5dMF362MvDp8L27ctZt6uDOBjFmVtLUCn4eyMTFOBRQwfAm8dkb+0LE09KE3Xh0Xre43W7N+cPAFS8ySduvAxVJ2X4QxPhOQtPlhoZbecBqEo7QHFMiOgS8H+OzjyLGIz/OtuDd9KdIPdDLa6piOremPvMiouDk6iPIBvbmvf/XxkvYg5hOjgkERv1H8Ob1s8LdVrDookysdWWzZpztNmr9VNuneq3WIrVSpQUOJv8lZ4njtAltMpBDygu7njZL83vNeijYXOIamkjvcayTI6Xp1xbJOA0T7nM+0Sr9F1FBnQggKcpSQ6l2oHW7rPz6B6I0HbdS6g9tkViEXZdPZ+rG6hxgZ6jdG4ujpVWWE1xWk5plDEExEwZM+9dHnihWUub4Ft8Bo3Hw6R9h40y8Q6rbyEy8fkhY/CPF/xWkzk0aIn6Zw14Is54JKkDF4JaF0kkvpGtpqJPw6b8OYcbG4wdpRTfKM2VZpqY4WTmUDwFZpJPjuZHgYJDUXGLp8tNUxpUYm6L5tfNGiwVwBZ4hlY7BYDUH0GoMvaA3mpXv+IhyaRoT9SqjmeG/h5I+Ew9OsG93klq9lGRLihl3x/h8tT/h8vmczDkSi4Fo3bpI5SkAJMmZUVWJnikeM=
+  bucket: vatusa-frontend
+  local-dir: build/
+  acl: public_read
   on:
-  branch: master
+    repo: VATUSA/frontend
