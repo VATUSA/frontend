@@ -46,8 +46,11 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
+    "start-semantic": "gulp --gulpfile semantic/gulpfile.js watch",
     "start": "node scripts/start.js",
+    "start-all": "npm-run-all -p start start-semantic",
     "build": "node scripts/build.js",
+    "build-semantic": "gulp --gulpfile semantic/gulpfile.js build",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "eslint ."
   },
@@ -101,6 +104,9 @@
     }
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^15.1.0"
+    "eslint-config-airbnb": "^15.1.0",
+    "gulp": "^3.9.1",
+    "npm-run-all": "^4.0.2",
+    "semantic-ui": "^2.2.13"
   }
 }
