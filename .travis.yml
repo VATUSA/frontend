@@ -17,5 +17,6 @@ deploy:
   bucket: vatusa-frontend
   local-dir: build/
   acl: public_read
+  region: eu-west-2
   on:
     repo: VATUSA/frontend
