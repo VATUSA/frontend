@@ -1,16 +1,18 @@
 import React from 'react';
 import { Container, Image } from 'semantic-ui-react';
-import './Header.scss';
+import NavBar from '../NavBar/NavBar';
 import logo from './logo-dark.png';
-// import headerImage from './head.jpg';
+import './Header.scss';
 
-
-const Header = () => (
-  <div>
-    <Container fluid className="head">
-      <Image src={logo} className="logo" />
-    </Container>
-  </div>
-);
-
-export default Header;
+export default class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <Container fluid className="head">
+          <Image src={logo} className="logo" />
+        </Container>
+        <NavBar />
+      </div>
+    );
+  }
+}
