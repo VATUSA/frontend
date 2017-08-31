@@ -166,7 +166,7 @@ module.exports = {
           // use the "style" loader inside the async code so CSS from them won't be
           // in the main CSS file.
           {
-            test: /\.(s|)css$/,
+            test: /^(.{0,3}|.*(?!\.min).{4})\.(scss|css)$/,
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
@@ -178,6 +178,7 @@ module.exports = {
                         importLoaders: 2,
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
+                        modules: true,
                       },
                     },
                     {
