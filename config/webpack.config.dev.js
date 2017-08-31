@@ -161,13 +161,14 @@ module.exports = {
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
           {
-            test: /\.(s|)css$/,
+            test: /^(.{0,3}|.*(?!\.min).{4})\.(scss|css)$/,
             use: [
               require.resolve('style-loader'),
               {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 2,
+                  modules: true,
                 },
               },
               {
@@ -193,7 +194,7 @@ module.exports = {
               },
               {
                 loader: require.resolve('sass-loader'),
-              }
+              },
             ],
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
