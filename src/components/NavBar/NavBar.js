@@ -16,7 +16,7 @@ export default class NavBar extends React.Component {
           <Dropdown
             item
             text="Facilities"
-            scrolling="true"
+            scrolling
           >
             <Dropdown.Menu>
               <Dropdown.Item
@@ -118,7 +118,7 @@ export default class NavBar extends React.Component {
           <Dropdown
             item
             text="Division Info"
-            scrolling="true"
+            scrolling
           >
             <Dropdown.Menu>
               <Dropdown.Item
@@ -141,11 +141,73 @@ export default class NavBar extends React.Component {
               />
             </Dropdown.Menu>
           </Dropdown>
-          <Menu.Menu
-            name="Pilot Tools"
+          <Dropdown
+            item
+            text="Pilot Tools"
+            scrolling
           >
-            Pilot Tools
-          </Menu.Menu>
+            <Dropdown.Menu>
+              <Dropdown.Item
+                text="Getting Started"
+              />
+              <Dropdown.Item
+                text="Events Calendar"
+              />
+              <Dropdown.Item
+                text="Training"
+              />
+              <Dropdown.Item
+                text="Virtual Airlines"
+              />
+              <Dropdown.Item
+                text="Charts"
+              />
+              <Dropdown.Item
+                text="Routes"
+              />
+              <Dropdown.Item
+                text="VATSIM Stats/Tracking"
+              />
+              <Dropdown.Divider />
+              <Dropdown.Header
+                content="Weather"
+              />
+              <Dropdown.Menu
+                scrolling
+              >
+                <Dropdown.Item
+                  text="METARs"
+                />
+                <Dropdown.Item
+                  text="TAFs"
+                />
+                <Dropdown.Item
+                  text="PIREPs"
+                />
+                <Dropdown.Item
+                  text="Baloon Sounding"
+                />
+                <Dropdown.Item
+                  text="Winds Aloft"
+                />
+                <Dropdown.Item
+                  text="Graphical Forcasts"
+                />
+                <Dropdown.Item
+                  text="Prog Charts"
+                />
+                <Dropdown.Item
+                  text="Satellite Imagery"
+                />
+                <Dropdown.Item
+                  text="RADAR"
+                />
+                <Dropdown.Item
+                  text="ASOS/AWOS Stations"
+                />
+              </Dropdown.Menu>
+            </Dropdown.Menu>
+          </Dropdown>
           <Menu.Menu
             name="TMU Maps"
           >
