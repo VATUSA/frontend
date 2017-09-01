@@ -115,11 +115,32 @@ export default class NavBar extends React.Component {
           >
             Forums
           </Menu.Item>
-          <Menu.Menu
-            name="Division Info"
+          <Dropdown
+            item
+            text="Division Info"
+            scrolling="true"
           >
-            Division Info
-          </Menu.Menu>
+            <Dropdown.Menu>
+              <Dropdown.Item
+                text="Policies"
+              />
+              <Dropdown.Item
+                text="Computer Based Training (CBT)"
+              />
+              <Dropdown.Item
+                text="Events Calendar"
+              />
+              <Dropdown.Item
+                text="Members and Staff"
+              />
+              <Dropdown.Item
+                text="Solo Certs"
+              />
+              <Dropdown.Item
+                text="Ace Team"
+              />
+            </Dropdown.Menu>
+          </Dropdown>
           <Menu.Menu
             name="Pilot Tools"
           >
