@@ -8,7 +8,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Container>
+        <Container fluid>
           <div className={style.head}>
             <div className={style.layer}>
               <Container>
