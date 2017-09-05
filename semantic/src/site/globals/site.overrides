@@ -10,6 +10,13 @@
   border-radius: 0;
   margin-top: 0;
   box-shadow: none;
+  min-height: @navHeight;
+}
+
+.ui.navBar.menu > .ui.container > .item {
+    color: @navTextColor;
+    border-left: none;
+    border-right: none;
 }
 
 /*******************************

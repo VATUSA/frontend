@@ -13,3 +13,9 @@
 *******************************/
 @headerHeight: 125px;
 @headerImage: './img/head.jpg';
+
+/*******************************
+         NavBar
+*******************************/
+@navHeight: 50px;
+@navTextColor: rgb(255, 255, 255);

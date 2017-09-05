@@ -213,6 +213,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   margin-top: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
+  min-height: 50px;
+}
+.ui.navBar.menu > .ui.container > .item {
+  color: #ffffff;
+  border-left: none;
+  border-right: none;
 }
 
 
