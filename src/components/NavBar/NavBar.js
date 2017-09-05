@@ -1,11 +1,10 @@
 import React from 'react';
 import { Menu, Container, Dropdown } from 'semantic-ui-react';
-import style from './NavBar.scss';
 
 export default class NavBar extends React.Component {
   render() {
     return (
-      <Menu className={style.nav}>
+      <Menu className="navBar">
         <Container>
           <Menu.Item
             name="Home"

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Image } from 'semantic-ui-react';
 import NavBar from '../NavBar/NavBar';
-import style from './Header.scss';
 import logo from './logo-dark.png';
 
 export default class Header extends React.Component {
@@ -9,10 +8,10 @@ export default class Header extends React.Component {
     return (
       <div>
         <Container fluid>
-          <div className={style.head}>
-            <div className={style.layer}>
+          <div className="head">
+            <div className="layer">
               <Container>
-                <Image src={logo} className={style.logo} />
+                <Image src={logo} logo />
               </Container>
             </div>
           </div>
