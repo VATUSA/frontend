@@ -785,6 +785,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 .logo {
   height: 125px;
+  margin: 0 0 0 0 !important;
 }
 
 .head {
@@ -803,6 +804,21 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   left: 0;
   width: 100%;
   height: 125px;
+}
+
+.wb-usr {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 20px;
+  padding: 12px;
+  color: #222;
+  -webkit-box-shadow: 3px 3px 3px #000;
+  box-shadow: 3px 3px 3px #000;
+}
+
+.wb-usr > .grab {
+  font-size: 17px;
+  font-weight: 900;
 }
 /*!
  * # Semantic UI 2.2.13 - Button
