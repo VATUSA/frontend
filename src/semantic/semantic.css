@@ -785,7 +785,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 .logo {
   height: 125px;
-  margin: 0 0 0 0 !important;
+}
+
+.ui.image.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .head {
@@ -797,6 +802,18 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   height: 125px;
 }
 
+.head > .layer > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
 .layer {
   background-color: rgba(5, 35, 71, 0.9);
   position: absolute;
@@ -804,6 +821,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   left: 0;
   width: 100%;
   height: 125px;
+}
+
+.wb-usr-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .wb-usr {
@@ -814,6 +837,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   color: #222;
   -webkit-box-shadow: 3px 3px 3px #000;
   box-shadow: 3px 3px 3px #000;
+  display: block;
 }
 
 .wb-usr > .grab {

@@ -24,8 +24,12 @@
 *******************************/
 .logo {
   height: @headerHeight;
-  margin: 0 0 0 0 !important;
 }
+
+.ui.image.logo {
+  display: flex;
+}
+
 .head {
   background-color: @ogBlue;
   background-image: @headerImage;
@@ -34,6 +38,13 @@
   background-repeat: no-repeat;
   height:@headerHeight;
 }
+
+.head > .layer > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .layer {
   background-color: fade(@ogBlue, 90%);
   position: absolute;
@@ -43,6 +54,10 @@
   height: @headerHeight;
 }
 
+.wb-usr-wrapper {
+  display: flex;
+}
+
 .wb-usr {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -50,6 +65,7 @@
   padding: 12px;
   color: #222;
   box-shadow: 3px 3px 3px #000;
+  display: block;
 }
 
 .wb-usr > .grab {
