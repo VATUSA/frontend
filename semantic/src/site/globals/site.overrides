@@ -34,7 +34,7 @@
   height:@headerHeight;
 }
 .layer {
-  background-color: fade(@ogBlue, 10%);
+  background-color: fade(@ogBlue, 90%);
   position: absolute;
   top: 0;
   left: 0;

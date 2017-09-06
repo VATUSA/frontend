@@ -12,7 +12,7 @@
          Header
 *******************************/
 @headerHeight: 125px;
-@headerImage: './img/head.jpg';
+@headerImage: url('/img/head.jpg');
 
 /*******************************
          NavBar
