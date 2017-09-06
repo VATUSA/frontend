@@ -10,7 +10,7 @@ export default class NavBar extends React.Component {
             Home
           </Menu.Item>
 
-          <Dropdown item text="Facilities" scrolling>
+          <Dropdown simple item text="Facilities">
             <Dropdown.Menu>
               {/* This needs to be replaced with an API call */}
               <Dropdown.Item text="Albuquerque ARTCC" as="a" target="_blank" href="http://www.zabartcc.org" />
@@ -41,7 +41,7 @@ export default class NavBar extends React.Component {
           <Menu.Item name="Forums">
             Forums
           </Menu.Item>
-          <Dropdown item text="Division Info" scrolling>
+          <Dropdown simple item text="Division Info" scrolling>
             <Dropdown.Menu>
               <Dropdown.Item text="Policies" />
               <Dropdown.Item text="Computer Based Training (CBT)" />
@@ -51,7 +51,7 @@ export default class NavBar extends React.Component {
               <Dropdown.Item text="Ace Team" />
             </Dropdown.Menu>
           </Dropdown>
-          <Dropdown item text="Pilot Tools">
+          <Dropdown simple item text="Pilot Tools">
             <Dropdown.Menu>
               <Dropdown.Item text="Getting Started" as="a" target="_blank" href="https://www.vatsim.net/pilots/getting-started" />
               <Dropdown.Item text="Events Calendar" as="a" target="_blank" href="https://www.vatusa.net/forums/?action=calendar" />
