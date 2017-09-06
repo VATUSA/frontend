@@ -13,7 +13,7 @@
   min-height: @navHeight;
 }
 
-.ui.navBar.menu > .ui.container > .item {
+.ui.navBar.menu > .ui.container > .item, .ui.navBar.menu > .ui.container > .menu > .item {
     color: @navTextColor;
     border-left: none;
     border-right: none;

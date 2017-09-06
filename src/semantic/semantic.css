@@ -772,7 +772,8 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   min-height: 50px;
 }
 
-.ui.navBar.menu > .ui.container > .item {
+.ui.navBar.menu > .ui.container > .item,
+.ui.navBar.menu > .ui.container > .menu > .item {
   color: #ffffff;
   border-left: none;
   border-right: none;
