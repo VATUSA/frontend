@@ -68,6 +68,7 @@
     ]
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "env": {
       "browser": true,
       "jest": true
@@ -82,7 +83,7 @@
   "devDependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
-    "babel-eslint": "7.2.3",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.1",
     "babel-preset-react-app": "^3.0.2",
