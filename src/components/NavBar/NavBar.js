@@ -1,8 +1,227 @@
 import React from 'react';
 import { Menu, Container, Dropdown } from 'semantic-ui-react';
+import TMU from '../TMU/TMU';
 
-export default class NavBar extends React.Component {
+class NavBar extends React.Component {
   render() {
+    const TMUFacilities = [
+      [
+        {
+          name: 'Honolulu Control Facility',
+          ident: 'HCF',
+        },
+      ],
+      [
+        {
+          name: 'Albuquerque ARTCC',
+          ident: 'ZAB',
+        },
+      ],
+      [
+        {
+          name: 'Anchorage ARTCC',
+          ident: 'ZAN',
+        },
+      ],
+      [
+        {
+          name: 'Chicago ARTCC',
+          ident: 'ZAU',
+        },
+        {
+          name: 'Chicago TRACON',
+          ident: 'C90',
+        },
+      ],
+      [
+        {
+          name: 'Boston ARTCC',
+          ident: 'ZBW',
+        },
+        {
+          name: 'Boston Consolidated TRACON',
+          ident: 'A90',
+        },
+        {
+          name: 'Albany ATCT/TRACON',
+          ident: 'ALB',
+        },
+        {
+          name: 'Bangor ATCT/TRACON',
+          ident: 'BGR',
+        },
+        {
+          name: 'Burlington ATCT/TRACON',
+          ident: 'BTV',
+        },
+        {
+          name: 'Cape TRACON',
+          ident: 'K90',
+        },
+        {
+          name: 'Providence ATCT/TRACON',
+          ident: 'PVD',
+        },
+        {
+          name: 'Syracuse ATCT/TRACON',
+          ident: 'SYR',
+        },
+        {
+          name: 'Bradley TRACON',
+          ident: 'Y90',
+        },
+      ],
+      [
+        {
+          name: 'Washington ARTCC',
+          ident: 'ZDC',
+        },
+      ],
+      [
+        {
+          name: 'Denver ARTCC',
+          ident: 'ZDV',
+        },
+        {
+          name: 'Denver TRACON',
+          ident: 'D01',
+        },
+      ],
+      [
+        {
+          name: 'Fort Worth ARTCC',
+          ident: 'ZFW',
+        },
+        {
+          name: 'Dallas Ft. Worth TRACON',
+          ident: 'D10',
+        },
+      ],
+      [
+        {
+          name: 'Houston ARTCC',
+          ident: 'ZHU',
+        },
+        {
+          name: 'Houston TRACON',
+          ident: 'I90',
+        },
+        {
+          name: 'New Orleans ATCT/TRACON',
+          ident: 'MSY',
+        },
+      ],
+      [
+        {
+          name: 'Indianapolis ARTCC',
+          ident: 'ZID',
+        },
+      ],
+      [
+        {
+          name: 'Jacksonville ARTCC',
+          ident: 'ZJX',
+        },
+        {
+          name: 'Central Florida TRACON',
+          ident: 'F11',
+        },
+      ],
+      [
+        {
+          name: 'Kansas City ARTCC',
+          ident: 'ZKC',
+        },
+      ],
+      [
+        {
+          name: 'Los Angeles ARTCC',
+          ident: 'ZLA',
+        },
+      ],
+      [
+        {
+          name: 'Salt Lake City ARTCC',
+          ident: 'ZLC',
+        },
+        {
+          name: 'Salt Lake TRACON',
+          ident: 'S56',
+        },
+      ],
+      [
+        {
+          name: 'Miami ARTCC',
+          ident: 'ZMA',
+        },
+      ],
+      [
+        {
+          name: 'Memphis ARTCC',
+          ident: 'ZME',
+        },
+        {
+          name: 'Nashville ATCT/TRACON',
+          ident: 'BNA',
+        },
+        {
+          name: 'Little Rock ATCT/TRACON',
+          ident: 'LIT',
+        },
+        {
+          name: 'Memphis TRACON',
+          ident: 'M03',
+        },
+      ],
+      [
+        {
+          name: 'Minneapolis ARTCC',
+          ident: 'ZMP',
+        },
+        {
+          name: 'Minneapolis TRACON',
+          ident: 'M98',
+        },
+      ],
+      [
+        {
+          name: 'New York ARTCC',
+          ident: 'ZNY',
+        },
+      ],
+      [
+        {
+          name: 'Oakland ARTCC',
+          ident: 'ZOA',
+        },
+        {
+          name: 'NorCal Consolidated TRACON',
+          ident: 'NCT',
+        },
+        {
+          name: 'NorCal Consolidated TRACON - Reno',
+          ident: 'RNO',
+        },
+      ],
+      [
+        {
+          name: 'Cleveland ARTCC',
+          ident: 'ZOB',
+        },
+      ],
+      [
+        {
+          name: 'Seattle ARTCC',
+          ident: 'ZSE',
+        },
+      ],
+      [
+        {
+          name: 'Atlanta ARTCC',
+          ident: 'ZTL',
+        },
+      ],
+    ];
     return (
       <Menu className="navBar">
         <Container>
@@ -79,103 +298,7 @@ export default class NavBar extends React.Component {
             </Dropdown.Menu>
           </Dropdown>
 
-          <Dropdown simple item text="TMU Maps">
-            <Dropdown.Menu>
-              {/* This needs to be replaced with an API call */}
-              <Dropdown.Item text="HCF - Honolulu Control Facility" />
-              <Dropdown.Item text="ZAB - Albuquerque ARTCC" />
-              <Dropdown.Item text="ZAN - Anchorage ARTCC" />
-              <Dropdown item text="ZAU - Chicago ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZAU - Chicago ARTCC" />
-                  <Dropdown.Item text="C90 - Chicago Tracon" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown item text="ZBW - Boston ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZBW - Boston ARTCC" />
-                  <Dropdown.Item text="A90 - Boston Consolidated TRACON" />
-                  <Dropdown.Item text="ALB - ALbany ATCT/TRACON" />
-                  <Dropdown.Item text="BGR - Bangor ATCT/TRACON" />
-                  <Dropdown.Item text="BTV - Burlington ATCT/TRACON" />
-                  <Dropdown.Item text="K90 - Cape TRACON" />
-                  <Dropdown.Item text="PVD - Providence ATCT/TRACON" />
-                  <Dropdown.Item text="PWM - Portland ATCT/TRACON" />
-                  <Dropdown.Item text="SYR - Syracuse ATCT/TRACON" />
-                  <Dropdown.Item text="Y90 - Bradley TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown.Item text="ZDC - Washington ARTCC" />
-              <Dropdown item text="ZDV - Denver ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZDV - Denver ARTCC" />
-                  <Dropdown.Item text="D01 - Denver TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown item text="ZFW - Fort Worth ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZFW - Fort Worth ARTCC" />
-                  <Dropdown.Item text="D10 - Dallas - Ft Worth TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown item text="ZHU - Houston ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZHU -  Houst ARTCC" />
-                  <Dropdown.Item text="I90 - Houston TRACON" />
-                  <Dropdown.Item text="MSY - New Orleans ATCT/TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown.Item text="ZID - Indianapolis ARTCC" />
-              <Dropdown item text="ZJX - Jacksonville ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZJX - Jacksonville ARTCC" />
-                  <Dropdown.Item text="F11 - Central Florida TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown item text="ZKC - Kansas City ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZKC - Kansas City ARTCC" />
-                  <Dropdown.Item text="ICT - Wichita ATCT/TRACON" />
-                  <Dropdown.Item text="MCI - Kansas City ATCT/TRACON" />
-                  <Dropdown.Item text="T75 - St. Louis TRACON" />
-                  <Dropdown.Item text="TUL - Tulsa ATCT/TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown.Item text="ZLA - Los Angeles ARTCC" />
-              <Dropdown item text="ZLC - Salt Lake City ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZLC - Salt Lake City ARTCC" />
-                  <Dropdown.Item text="S56 - Salt lake TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown.Item text="ZMA - Miami ARTCC" />
-              <Dropdown item text="ZME - Memphis ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZME - Memphis ARTCC" />
-                  <Dropdown.Item text="BNA - Nashville ATCT/TRACON" />
-                  <Dropdown.Item text="LIT - Litle Rock ATCT/TRACON" />
-                  <Dropdown.Item text="M03 - Memphis TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown item text="ZMP - Minneapolis ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZMP - Minneapolis ARTCC" />
-                  <Dropdown.Item text="M98 - Minneapolis TRACON" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown.Item text="ZNY - New York ARTCC" />
-              <Dropdown item text="ZOA - Oakland ARTCC">
-                <Dropdown.Menu>
-                  <Dropdown.Item text="ZOA - Oakland ARTCC" />
-                  <Dropdown.Item text="NCT - NorCal Consolidated TRACON" />
-                  <Dropdown.Item text="RNO - NorCal Consolidated TRACON - Reno" />
-                </Dropdown.Menu>
-              </Dropdown>
-              <Dropdown.Item text="ZOB - Cleveland ARTCC" />
-              <Dropdown.Item text="ZSE - Seattle ARTCC" />
-              <Dropdown.Item text="ZTL - Atlanta ARTCC" />
-            </Dropdown.Menu>
-          </Dropdown>
+          <TMU facilities={TMUFacilities} />
 
           <Dropdown simple item text="Support">
             <Dropdown.Menu>
@@ -231,3 +354,5 @@ export default class NavBar extends React.Component {
     );
   }
 }
+
+export default NavBar;
