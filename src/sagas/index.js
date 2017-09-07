@@ -5,8 +5,7 @@
  * @desc User
  */
 
-import { takeEvery, delay } from 'redux-saga';
-import { put, call, fork } from 'redux-saga/effects';
+import { put, call, fork, takeEvery } from 'redux-saga/effects';
 
 import { ActionTypes } from '../constants';
 
@@ -18,7 +17,7 @@ export function* getEvents() {
     // An API call might be useful here.
     // yield call(delay, 1000);
 
-    const response = await fetch('https://api.vatusa.net/events');
+    const response = yield call(() => fetch('https://apidev.vatusa.net/events'));
     const responseBody = response.json();
 
     yield put({
@@ -31,7 +30,7 @@ export function* getEvents() {
 }
 
 function* watchGetEvents() {
-  yield* takeEvery(ActionTypes.GET_EVENTS, getEvents);
+  yield takeEvery(ActionTypes.GET_EVENTS, getEvents);
 }
 
 /**

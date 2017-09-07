@@ -1,10 +1,12 @@
-import sagaMiddleware from 'redux-saga';
+import createSagaMiddleware from 'redux-saga';
 import { createStore, compose, applyMiddleware } from 'redux';
 import { persistState } from 'redux-devtools';
 
 import rootReducer from '../reducers';
+import rootSaga from '../sagas';
 
 let enhancer;
+const sagaMiddleware = createSagaMiddleware();
 
 function getDebugSessionKey() {
   // You can write custom logic here!
@@ -28,7 +30,11 @@ if (window.__REDUX_DEVTOOLS_EXTENSION__) { //eslint-disable-line
 export default function configureStore(initialState) {
   // Note: only Redux >= 3.1.0 supports passing enhancer as third argument.
   // See https://github.com/rackt/redux/releases/tag/v3.1.0
-  return createStore(rootReducer,
+  const store = createStore(rootReducer,
     initialState,
     enhancer);
+
+  sagaMiddleware.run(rootSaga);
+
+  return store;
 }
