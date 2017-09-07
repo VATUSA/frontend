@@ -118,9 +118,9 @@ export default class NavBar extends React.Component {
                   <Dropdown.Item text="D10 - Dallas - Ft Worth TRACON" />
                 </Dropdown.Menu>
               </Dropdown>
-              <Dropdown item text="ZHU - ARTCC">
+              <Dropdown item text="ZHU - Houston ARTCC">
                 <Dropdown.Menu>
-                  <Dropdown.Item text="ZHU -  ARTCC" />
+                  <Dropdown.Item text="ZHU -  Houst ARTCC" />
                   <Dropdown.Item text="I90 - Houston TRACON" />
                   <Dropdown.Item text="MSY - New Orleans ATCT/TRACON" />
                 </Dropdown.Menu>
