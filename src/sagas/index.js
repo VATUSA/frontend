@@ -16,13 +16,14 @@ import { ActionTypes } from '../constants';
 export function* getEvents() {
   try {
     // An API call might be useful here.
-    yield call(delay, 1000);
+    // yield call(delay, 1000);
+
+    const response = await fetch('https://api.vatusa.net/events');
+    const responseBody = response.json();
 
     yield put({
       type: ActionTypes.RECEIVE_EVENTS,
-      events: {
-        magic: true,
-      },
+      events: responseBody.events,
     });
   } catch (err) {
     // Do error things.
