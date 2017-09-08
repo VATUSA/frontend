@@ -1,20 +1,36 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Icon } from 'semantic-ui-react';
 
-export default class UserBlob extends React.Component {
+class UserBlob extends Component {
   render() {
+    const { name, cid, rating, position } = this.props;
     return (
       <div className="wb-usr-wrapper">
         <div className="wb-usr">
-          <span className="grab">User Blob</span><br />
+          <span className="grab">{name}</span><br />
           <small>
-            <Icon name="user" />799999 &nbsp; — &nbsp;
-            <Icon name="trophy" />C1 (Controller)
+            <Icon name="user" />{cid} &nbsp; — &nbsp;
+            <Icon name="trophy" />{`${rating.short} (${rating.long})`}
             <br />
-            <Icon name="star" />Staff - VATUSA
+            <Icon name="star" />{`${position.title} - ${position.facility}`}
           </small>
         </div>
       </div>
     );
   }
 }
+
+UserBlob.propTypes = {
+  name: PropTypes.string.isRequired,
+  cid: PropTypes.number.isRequired,
+  rating: PropTypes.shape({
+    short: PropTypes.string,
+    long: PropTypes.string,
+  }).isRequired,
+  position: PropTypes.shape({
+    title: PropTypes.string,
+    facility: PropTypes.string,
+  }).isRequired,
+};
+
+export default UserBlob;

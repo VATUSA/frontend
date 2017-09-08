@@ -6,6 +6,14 @@ import logo from './logo-dark.png';
 
 export default class Header extends React.Component {
   render() {
+    const defaultRating = {
+      short: 'OBS',
+      long: 'Observer',
+    };
+    const defaultPosition = {
+      title: 'Staff',
+      facility: 'VATUSA',
+    };
     return (
       <div>
         <Container fluid>
@@ -13,7 +21,12 @@ export default class Header extends React.Component {
             <div className="layer">
               <Container>
                 <Image src={logo} className="logo" />
-                <UserBlob />
+                <UserBlob
+                  name="User Blob"
+                  cid={799999}
+                  rating={defaultRating}
+                  position={defaultPosition}
+                />
               </Container>
             </div>
           </div>
