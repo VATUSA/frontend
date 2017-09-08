@@ -9,6 +9,7 @@ class FacilitiesDropdown extends Component {
       as="a"
       target="_blank"
       href={facility.link}
+      key={facility.ident}
     />),
     );
   }
@@ -29,6 +30,7 @@ FacilitiesDropdown.propTypes = {
     PropTypes.shape({
       name: PropTypes.string,
       link: PropTypes.string,
+      ident: PropTypes.string,
     }),
   ).isRequired,
 };

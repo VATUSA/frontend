@@ -11,7 +11,7 @@ class TMUItem extends Component {
       return (
         <Dropdown item text={dropdownTitle}>
           <Dropdown.Menu>
-            {facility.map(sector => <Dropdown.Item text={`${sector.ident} - ${sector.name}`} />)}
+            {facility.map(sector => <Dropdown.Item key={sector.ident} text={`${sector.ident} - ${sector.name}`} />)}
           </Dropdown.Menu>
         </Dropdown>
       );

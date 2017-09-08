@@ -5,7 +5,7 @@ import TMUItem from './TMUItem';
 class TMU extends Component {
   renderDropdown() {
     const { facilities } = this.props;
-    return facilities.map(facility => <TMUItem facility={facility} />);
+    return facilities.map(facility => <TMUItem key={facility[0].ident} facility={facility} />);
   }
 
   render() {

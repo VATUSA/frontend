@@ -229,90 +229,112 @@ class NavBar extends React.Component {
       {
         name: 'Albuquerque ARTCC',
         link: 'http://www.zabartcc.org',
+        ident: 'ZAB',
       },
       {
         name: 'Anchorage ARTCC',
         link: 'http://www.vzanartcc.net',
+        ident: 'ZAN',
       },
       {
         name: 'Atlanta ARTCC',
         link: 'http://www.atlantacenter.net',
+        ident: 'ZTL',
       },
       {
         name: 'Boston ARTCC',
         link: 'http://www.bvartcc.com',
+        ident: 'ZBW',
       },
       {
         name: 'Chicago ARTCC',
         link: 'http://www.zauartcc.org',
+        ident: 'ZAU',
       },
       {
         name: 'Cleveland ARTCC',
         link: 'http://www.zobartcc.com',
+        ident: 'ZOB',
       },
       {
         name: 'Denver ARTCC',
         link: 'http://www.denartcc.org',
+        ident: 'ZDV',
       },
       {
         name: 'Fort Worth ARTCC',
         link: 'http://www.zfwartcc.net',
+        ident: 'ZFW',
       },
       {
         name: 'Honolulu CF',
         link: 'http://www.hcfartcc.net',
+        ident: 'HCF',
       },
       {
         name: 'Houston ARTCC',
         link: 'http://www.zhuartcc.org',
+        ident: 'ZHU',
       },
       {
         name: 'Indianapolis ARTCC',
         link: 'http://www.zidartcc.org',
+        ident: 'ZID',
       },
       {
         name: 'Jacksonville ARTCC',
         link: 'http://www.zjxartcc.org',
+        ident: 'ZJX',
       },
       {
         name: 'Kansas City ARTCC',
         link: 'http://www.kcartcc.com',
+        ident: 'ZKC',
       },
       {
         name: 'Los Angeles ARTCC',
         link: 'http://www.laartcc.org',
+        ident: 'ZLA',
       },
       {
         name: 'Memphis ARTCC',
         link: 'http://www.vzme.org',
+        ident: 'ZME',
       },
       {
         name: 'Miami ARTCC',
         link: 'http://www.zmaartcc.net',
+        ident: 'ZMA',
       },
       {
         name: 'Minneapolis ARTCC',
         link: 'http://www.minniecenter.org',
+        ident: 'ZMP',
       },
       {
         name: 'New York ARTCC',
         link: 'http://www.nyartcc.org',
+        ident: 'ZNY',
       },
       {
         name: 'Oakland ARTCC',
         link: 'http://www.oakartcc.com',
+        ident: 'ZOA',
       },
       {
         name: 'Salt Lake City ARTCC',
         link: 'http://www.zlcartcc.com',
+        ident: 'ZLC',
       },
       {
         name: 'Seattle ARTCC',
         link: 'http://www.zseartcc.org',
+        ident: 'ZSE',
       },
       {
         name: 'Washington D.C. ARTCC',
         link: 'http://www.vzdc.org',
+        ident: 'ZDC',
       },
     ];
 
