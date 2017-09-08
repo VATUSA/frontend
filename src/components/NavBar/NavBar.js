@@ -1,9 +1,11 @@
 import React from 'react';
 import { Menu, Container, Dropdown } from 'semantic-ui-react';
 import TMU from '../TMU/TMU';
+import FacilitiesDropdown from '../FacilitiesDropdown/FacilitiesDropdown';
 
 class NavBar extends React.Component {
   render() {
+    /* This needs to be replaced with an API call */
     const TMUFacilities = [
       [
         {
@@ -222,6 +224,98 @@ class NavBar extends React.Component {
         },
       ],
     ];
+    /* This needs to be replaced with an API call */
+    const facilityWebsites = [
+      {
+        name: 'Albuquerque ARTCC',
+        link: 'http://www.zabartcc.org',
+      },
+      {
+        name: 'Anchorage ARTCC',
+        link: 'http://www.vzanartcc.net',
+      },
+      {
+        name: 'Atlanta ARTCC',
+        link: 'http://www.atlantacenter.net',
+      },
+      {
+        name: 'Boston ARTCC',
+        link: 'http://www.bvartcc.com',
+      },
+      {
+        name: 'Chicago ARTCC',
+        link: 'http://www.zauartcc.org',
+      },
+      {
+        name: 'Cleveland ARTCC',
+        link: 'http://www.zobartcc.com',
+      },
+      {
+        name: 'Denver ARTCC',
+        link: 'http://www.denartcc.org',
+      },
+      {
+        name: 'Fort Worth ARTCC',
+        link: 'http://www.zfwartcc.net',
+      },
+      {
+        name: 'Honolulu CF',
+        link: 'http://www.hcfartcc.net',
+      },
+      {
+        name: 'Houston ARTCC',
+        link: 'http://www.zhuartcc.org',
+      },
+      {
+        name: 'Indianapolis ARTCC',
+        link: 'http://www.zidartcc.org',
+      },
+      {
+        name: 'Jacksonville ARTCC',
+        link: 'http://www.zjxartcc.org',
+      },
+      {
+        name: 'Kansas City ARTCC',
+        link: 'http://www.kcartcc.com',
+      },
+      {
+        name: 'Los Angeles ARTCC',
+        link: 'http://www.laartcc.org',
+      },
+      {
+        name: 'Memphis ARTCC',
+        link: 'http://www.vzme.org',
+      },
+      {
+        name: 'Miami ARTCC',
+        link: 'http://www.zmaartcc.net',
+      },
+      {
+        name: 'Minneapolis ARTCC',
+        link: 'http://www.minniecenter.org',
+      },
+      {
+        name: 'New York ARTCC',
+        link: 'http://www.nyartcc.org',
+      },
+      {
+        name: 'Oakland ARTCC',
+        link: 'http://www.oakartcc.com',
+      },
+      {
+        name: 'Salt Lake City ARTCC',
+        link: 'http://www.zlcartcc.com',
+      },
+      {
+        name: 'Seattle ARTCC',
+        link: 'http://www.zseartcc.org',
+      },
+      {
+        name: 'Washington D.C. ARTCC',
+        link: 'http://www.vzdc.org',
+      },
+    ];
+
     return (
       <Menu className="navBar">
         <Container>
@@ -229,33 +323,7 @@ class NavBar extends React.Component {
             Home
           </Menu.Item>
 
-          <Dropdown simple item text="Facilities">
-            <Dropdown.Menu>
-              {/* This needs to be replaced with an API call */}
-              <Dropdown.Item text="Albuquerque ARTCC" as="a" target="_blank" href="http://www.zabartcc.org" />
-              <Dropdown.Item text="Anchorage ARTCC" as="a" target="_blank" href="http://www.vzanartcc.net" />
-              <Dropdown.Item text="Atlanta ARTCC" value="http://www.atlantacenter.net" />
-              <Dropdown.Item text="Boston ARTCC" as="a" target="_blank" href="http://www.bvartcc.com" />
-              <Dropdown.Item text="Chicago ARTCC" as="a" target="_blank" href="http://www.zauartcc.org" />
-              <Dropdown.Item text="Cleveland ARTCC" as="a" target="_blank" href="http://www.zobartcc.com" />
-              <Dropdown.Item text="Denver ARTCC" as="a" target="_blank" href="http://www.denartcc.org" />
-              <Dropdown.Item text="Fort Worth ARTCC" as="a" target="_blank" href="http://www.zfwartcc.net" />
-              <Dropdown.Item text="Honolulu CF" as="a" target="_blank" href="http://www.hcfartcc.net" />
-              <Dropdown.Item text="Houston ARTCC" as="a" target="_blank" href="http://www.zhuartcc.org" />
-              <Dropdown.Item text="Indianapolis ARTCC" as="a" target="_blank" href="http://www.zidartcc.org" />
-              <Dropdown.Item text="Jacksonville ARTCC" as="a" target="_blank" href="http://www.zjxartcc.org" />
-              <Dropdown.Item text="Kansas City ARTCC" as="a" target="_blank" href="http://www.kcartcc.com" />
-              <Dropdown.Item text="Los Angeles ARTCC" as="a" target="_blank" href="http://www.laartcc.org" />
-              <Dropdown.Item text="Memphis ARTCC" value="http://www.vzme.org" />
-              <Dropdown.Item text="Miami ARTCC" as="a" target="_blank" href="http://www.zmaartcc.net" />
-              <Dropdown.Item text="Minneapolis ARTCC" as="a" target="_blank" href="http://www.minniecenter.org" />
-              <Dropdown.Item text="New York ARTCC" as="a" target="_blank" href="http://www.nyartcc.org" />
-              <Dropdown.Item text="Oakland ARTCC" value="http://www.oakartcc.com" />
-              <Dropdown.Item text="Salt Lake City ARTCC" as="a" target="_blank" href="http://www.zlcartcc.com" />
-              <Dropdown.Item text="Seattle ARTCC" as="a" target="_blank" href="http://www.zseartcc.org" />
-              <Dropdown.Item text="Washington D.C. ARTCC" as="a" target="_blank" href="http://www.vzdc.org" />
-            </Dropdown.Menu>
-          </Dropdown>
+          <FacilitiesDropdown facilities={facilityWebsites} />
 
           <Menu.Item name="Forums">
             Forums
