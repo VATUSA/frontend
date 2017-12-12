@@ -1,10 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Immutable from "immutable";
-// import configureStore from './store/configureStore';
-// import Main from './components/main';
-// import './semantic/dist/semantic.min.css';
+import { render } from "react-dom";
 
-// const store = configureStore(Immutable.Map());
+const App = () => <h1>Hello React.</h1>;
 
-ReactDOM.render( <div />, document.getElementById( "app" ) );
+render( <App />, document.getElementById( "app" ) );
