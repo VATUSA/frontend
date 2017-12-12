@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/VATUSA/frontend/issues"
   },
-  "homepage": "https://github.com/VATUSA/frontend#readme"
+  "homepage": "https://github.com/VATUSA/frontend#readme",
+  "devDependencies": {
+    "poi": "^9.5.11"
+  }
 }
