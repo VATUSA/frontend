@@ -12,7 +12,6 @@
         "indent": [ 2, 4 ],
 
         // spacing
-        "space-in-parens": [ 2, "always" ],
         "template-curly-spacing": [ 2, "always" ],
         "array-bracket-spacing": [ 2, "always" ],
         "object-curly-spacing": [ 2, "always" ],
