@@ -4,7 +4,11 @@
   "description": "Project containing the front end of the VATUSA site",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-run-all build-semantic --parallel watch-poi watch-semantic",
+    "watch-poi": "poi",
+    "watch-semantic": "cd src/semantic && gulp",
+    "build-semantic": "cd src/semantic && gulp build"
   },
   "repository": {
     "type": "git",
@@ -26,16 +30,22 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
+    "file-loader": "^1.1.5",
     "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
     "poi": "^9.5.11",
     "poi-preset-react": "^9.2.1",
-    "sass-loader": "^6.0.6"
+    "poi-preset-resolve-alias": "^1.0.1",
+    "sass-loader": "^6.0.6",
+    "semantic-ui": "^2.2.13",
+    "url-loader": "^0.6.2"
   },
   "dependencies": {
     "airbnb-browser-shims": "^2.0.0",
     "immutable": "^3.8.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "semantic-ui-react": "^0.77.1"
   }
 }
