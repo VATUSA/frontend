@@ -6,8 +6,4 @@ module.exports = {
         }),
     ],
     cssModules: true,
-    webpack(config) {
-        console.dir(config.resolve.alias);
-        return config;
-    },
 };
