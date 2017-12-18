@@ -13,10 +13,7 @@ export default () => (
     <Menu.Item as="a">Support</Menu.Item>
     <Menu.Menu position="right">
       <Menu.Item className="item">
-        <Button as="a">Log in</Button>
-      </Menu.Item>
-      <Menu.Item>
-        <Button as="a" primary>Sign Up</Button>
+        <Button as="a" primary>Log in</Button>
       </Menu.Item>
     </Menu.Menu>
   </Container>
