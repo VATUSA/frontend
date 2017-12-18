@@ -38,7 +38,6 @@
     "poi-preset-react": "^9.2.1",
     "poi-preset-resolve-alias": "^1.0.1",
     "sass-loader": "^6.0.6",
-    "semantic-ui": "^2.2.13",
     "url-loader": "^0.6.2"
   },
   "dependencies": {
