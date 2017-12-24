@@ -17,7 +17,6 @@ before_install:
 script:
   - npm install
   - npx poi build
-  - ls
   - docker-compose build
 
 after_success:
