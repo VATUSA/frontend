@@ -1,26 +1,23 @@
 language: node_js
 node_js:
-  - 9
+- 9
 sudo: required
-
 env:
-  - DOCKER_COMPOSE_VERSION=1.17.1
-
+- DOCKER_COMPOSE_VERSION=1.17.1
 services:
-  - docker
-
+- docker
 before_install:
- - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
- - chmod +x docker-compose
- - sudo mv docker-compose /usr/local/bin
-
+- curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname
+  -s`-`uname -m` > docker-compose
+- chmod +x docker-compose
+- sudo mv docker-compose /usr/local/bin
 script:
-  - npm install
-  - npx poi build
-  - docker-compose build
-
+- npm install
+- npx poi build
+- docker-compose build
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-    docker push vatusa/frontend;
-    fi
+- if [ "$TRAVIS_BRANCH" == "master" ]; then docker login -u "$DOCKER_USERNAME" -p
+  "$DOCKER_PASSWORD"; docker push vatusa/frontend; fi
+notifications:
+  slack:
+    secure: m933vnWOteTgCtSV/Jt1GBlK2o3s96Da8csu2ImeoOkCaEuOZ60yl4ihiplkzFtdPzYahvY2VxhGLN8nZduVQPerez55m20vMVu98/1MPLhE/LbXjLGBH3lrKHeNdypqmE87KD4pflRZfRjjq15KFRxwgf05hnROdySimlWcTs+kBy09vRFUUJ5zj8amqn9nZ7+7DTNDqjvdLrSigYtw6t1IMEKyjSML9A5qw1F1XTqZ74oW/dBvATG+hhNq5iEHbZdcK8lnAj5w8o/3qkxqdv1cIyP5KNzg3y+ZtHOG2dwTgwvgNBZWfdsRYgnlMGUTlBVWNuU8vFDdkgl3PmuPZE5r1bG0XRL8W/E5B4vl3LgSQRZ0j/VjcSyLkgWxRl5LVo54irAdN8Flr50lcCvamXiIMymY61SVgWwE7u4qyV867DsT5zGS+RaxctL8aKZSNGu5SYi+6pEE85OeFOUTKJiBvImlJh7dPhMVQATxigWHR9ig9tEXKQ9PPhNqr9z6Ftpl6Ky+KmlVGDVBs7r9/lJjzIbffnhGubG2v3NgaSyRafx1QvjMVGmdQ119M/uRunewRvNlmYgF/6PLtER2MZ9NmiJPW8fvuQgTbrM/tODIP2VlGtQu0C16YRGWH4vY1FIaOMKMFOjyjRwUDxFg7jxm+RPvpBIdLcZ8rUEfQ/4=
