@@ -1,8 +1,0 @@
-version: '3.1'
-services:
-  frontend:
-    image: vatusa/frontend
-    container_name: vatusa_frontend
-    build: .
-    ports:
-      - 5001:80
