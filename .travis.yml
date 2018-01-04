@@ -2,8 +2,6 @@ language: node_js
 node_js:
 - 9
 sudo: required
-env:
-- DOCKER_COMPOSE_VERSION=1.17.1
 services:
 - docker
 before_install:
@@ -16,5 +14,13 @@ script:
 - npx poi build
 - docker-compose build
 after_success:
-- if [ "$TRAVIS_BRANCH" == "master" ]; then docker login -u "$DOCKER_USERNAME" -p
-  "$DOCKER_PASSWORD"; docker push vatusa/frontend; fi
+- if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker tag vatusa/frontend vatusa/frontend:latest;
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push vatusa/frontend;
+  fi
+- if [ "$TRAVIS_BRANCH" == "devel" ]; then
+    docker tag vatusa/frontend vatusa/frontend:devel
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push vatusa/frontend:devel;
+  fi

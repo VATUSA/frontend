@@ -5,4 +5,4 @@ services:
     container_name: vatusa_frontend
     build: .
     ports:
-      - 5001:80
+      - 5101:80
