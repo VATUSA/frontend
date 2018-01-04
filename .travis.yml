@@ -15,7 +15,7 @@ after_success:
     docker push vatusa/frontend;
   fi
 - if [ "$TRAVIS_BRANCH" == "devel" ]; then
-    docker tag vatusa/frontend vatusa/frontend:devel
+    docker tag vatusa/frontend vatusa/frontend:devel;
     docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
     docker push vatusa/frontend:devel;
   fi
