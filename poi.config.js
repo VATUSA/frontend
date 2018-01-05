@@ -5,4 +5,5 @@ module.exports = {
       './themes': 'src/semantic/dist/themes/', //eslint-disable-line
     }),
   ],
+  staticFolder: 'src/static',
 };
