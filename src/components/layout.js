@@ -39,14 +39,13 @@ export default class HomepageLayout extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={ { minHeight: 400, padding: '1em 0em' } }
+            style={ { minHeight: 400, padding: '0em 0em' } }
             vertical
           >
-            <Container>
-              <Menu inverted pointing secondary size="large">
-                <MainMenu />
-              </Menu>
-            </Container>
+
+            <Menu inverted borderless stackable size="large">
+              <MainMenu />
+            </Menu>
 
             <Container text>
               <Header
@@ -54,8 +53,8 @@ export default class HomepageLayout extends Component {
                 content="VATUSA"
                 inverted
                 style={ {
- fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '2em',
-} }
+                  fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '2em',
+                } }
               />
             </Container>
           </Segment>
