@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container, Menu, Button } from 'semantic-ui-react';
+import { Container, Image, Menu, Button } from 'semantic-ui-react';
+import logo from '../../static/logo-light.png'; // Light preferred, dark usable
 
 export default () => (
   <Container>
+    <Menu.Item><Image size="small" src={ logo } /></Menu.Item>
     <Menu.Item as="a" active>Home</Menu.Item>
     <Menu.Item as="a">Facilities</Menu.Item>
     <Menu.Item as="a">Forums</Menu.Item>
