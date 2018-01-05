@@ -1,5 +1,6 @@
-FROM nginx:1-alpine
+FROM vatusa/nginx
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /www
 
-COPY ./dist /usr/share/nginx/html
+COPY ./dist /www
+COPY ./docker /
