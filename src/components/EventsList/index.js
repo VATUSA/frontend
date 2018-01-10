@@ -27,12 +27,15 @@ class EventsList extends React.Component {
 
 EventsList.propTypes = {
   fetchEvents: PropTypes.func.isRequired,
-  events: PropTypes.array
+  events: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+  })),
 };
 
 EventsList.defaultProps = {
-  events: []
-}
+  events: [],
+};
 
 const mapStateToProps = state => ({
   events: state.events.list,
