@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import 'airbnb-browser-shims';
 import { Provider } from 'react-redux';
+import 'babel-polyfill';
 
 import configureStore from './store/configureStore';
 import './semantic/dist/semantic.min.css';

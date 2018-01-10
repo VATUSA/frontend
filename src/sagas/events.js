@@ -1,17 +1,14 @@
-import { takeLatest, put } from 'redux-saga/effects';
-import { eventFetch, eventFetchFailed, eventFetchSet } from '../ducks/events';
+import { takeLatest, put, call } from 'redux-saga/effects';
+import axios from 'axios';
+import { eventFetch, fetchEventsFailed, setEventData } from '../ducks/events';
 
 export default function* onFetchRecords() {
-  yield takeLatest(eventFetch, async function* fetchRecords() {
-    let responseBody;
+  yield takeLatest(eventFetch, function* fetchRecords() {
     try {
-      const response = await fetch('https://api.dev.vatusa.net/events');
-      responseBody = response.json();
+      const response = yield call(axios.get, 'https://api.vatusa.net/events');
+      yield put(setEventData(response.data));
     } catch (e) {
-      yield put(eventFetchFailed(e));
-      return;
+      yield put(fetchEventsFailed(e));
     }
-
-    yield put(eventFetchSet(responseBody.records));
   });
 }

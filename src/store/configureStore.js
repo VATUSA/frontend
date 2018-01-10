@@ -7,7 +7,10 @@ import rootSaga from '../sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
-const enhancer = compose(applyMiddleware(thunkMiddleware, sagaMiddleware));
+// eslint-disable-next-line no-underscore-dangle
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const enhancer = composeEnhancers(applyMiddleware(thunkMiddleware, sagaMiddleware));
 
 export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, enhancer);
