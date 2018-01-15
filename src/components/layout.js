@@ -38,7 +38,7 @@ export default class HomepageLayout extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 400, padding: '0em 0em' }}
+            style={{ minHeight: 300, padding: '0em 0em' }}
             vertical
           >
 
@@ -52,7 +52,7 @@ export default class HomepageLayout extends Component {
                 content="VATUSA"
                 inverted
                 style={{
-                  fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '2em',
+                  fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '0.5em',
                 }}
               />
             </Container>
