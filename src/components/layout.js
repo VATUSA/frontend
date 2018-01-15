@@ -10,6 +10,7 @@ import {
 import MainMenu from './MainMenu';
 import Events from './EventsList';
 import News from './NewsList';
+import Facilities from './FacilitiesList';
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
@@ -18,10 +19,10 @@ const FixedMenu = () => (
 );
 
 export default class HomepageLayout extends Component {
-  state = {}
+  state = {};
 
-  hideFixedMenu = () => this.setState({ visible: false })
-  showFixedMenu = () => this.setState({ visible: true })
+  hideFixedMenu = () => this.setState({ visible: false });
+  showFixedMenu = () => this.setState({ visible: true });
 
   render() {
     const { visible } = this.state;
@@ -62,11 +63,14 @@ export default class HomepageLayout extends Component {
         <Segment basic>
           <Grid>
             <Grid.Row>
-              <Grid.Column width={8}>
+              <Grid.Column width={6}>
                 <News />
               </Grid.Column>
-              <Grid.Column width={8}>
+              <Grid.Column width={6}>
                 <Events />
+              </Grid.Column>
+              <Grid.Column width={4}>
+                <Facilities />
               </Grid.Column>
             </Grid.Row>
           </Grid>
