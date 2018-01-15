@@ -8,6 +8,7 @@ import {
 } from 'semantic-ui-react';
 import MainMenu from './MainMenu';
 import Events from './EventsList';
+import News from './NewsList';
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
@@ -58,6 +59,7 @@ export default class HomepageLayout extends Component {
         </Visibility>
 
         <Events />
+        <News />
       </div>
     );
   }
