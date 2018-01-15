@@ -17,7 +17,7 @@ class NewsList extends React.Component {
 
   render() {
     return (
-      <Card>
+      <Card centered fluid>
         <Card.Content>
           <Card.Header>
             Recent News

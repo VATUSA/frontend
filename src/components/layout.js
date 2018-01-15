@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   Container,
   Header,
+  Grid,
   Menu,
   Segment,
   Visibility,
@@ -58,8 +59,18 @@ export default class HomepageLayout extends Component {
           </Segment>
         </Visibility>
 
-        <Events />
-        <News />
+        <Segment basic>
+          <Grid>
+            <Grid.Row>
+              <Grid.Column width={8}>
+                <News />
+              </Grid.Column>
+              <Grid.Column width={8}>
+                <Events />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Segment>
       </div>
     );
   }
