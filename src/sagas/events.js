@@ -5,7 +5,7 @@ import { eventFetch, fetchEventsFailed, setEventData } from '../ducks/events';
 export default function* onFetchRecords() {
   yield takeLatest(eventFetch, function* fetchRecords() {
     try {
-      const response = yield call(axios.get, 'https://api.vatusa.net/events');
+      const response = yield call(axios.get, 'https://api.dev.vatusa.net/events,10');
       yield put(setEventData(response.data));
     } catch (e) {
       yield put(fetchEventsFailed(e));

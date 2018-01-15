@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Card, Feed } from 'semantic-ui-react';
 import { fetchEvents } from '../../ducks/events';
 
 class EventsList extends React.Component {
@@ -10,17 +11,24 @@ class EventsList extends React.Component {
 
   renderEventsList() {
     const { events } = this.props;
-    const list = events.map(event => (<li key={event.id}>{event.title}</li>));
+    const list = events.map(event => (<Feed.Event icon="plane" key={event.id} summary={event.title} date={event.date} />));
     return list;
   }
 
   render() {
     return (
-      <div>
-        <ul>
-          {this.renderEventsList()}
-        </ul>
-      </div>
+      <Card>
+        <Card.Content>
+          <Card.Header>
+            Upcoming Events
+          </Card.Header>
+        </Card.Content>
+        <Card.Content>
+          <Feed>
+            {this.renderEventsList()}
+          </Feed>
+        </Card.Content>
+      </Card>
     );
   }
 }
