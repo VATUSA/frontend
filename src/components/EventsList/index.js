@@ -11,7 +11,14 @@ class EventsList extends React.Component {
 
   renderEventsList() {
     const { events } = this.props;
-    const list = events.map(event => (<Feed.Event icon="plane" key={event.id} summary={event.title} date={event.humandate} />));
+    const list = events.map(event => (
+      <Feed.Event key={event.id}>
+        <Feed.Label icon="plane" />
+        <Feed.Content>
+          <Feed.Date content={event.humandate} />
+          <Feed.Summary><span dangerouslySetInnerHTML={{ __html: event.title }} /></Feed.Summary>
+        </Feed.Content>
+      </Feed.Event>));
     return list;
   }
 

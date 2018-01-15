@@ -11,7 +11,17 @@ class NewsList extends React.Component {
 
   renderNewsList() {
     const { news } = this.props;
-    const list = news.map(newsItem => (<Feed.Event icon="newspaper" key={newsItem.id} summary={newsItem.subject} date={newsItem.humandate} />));
+    const list = news.map(newsItem => (
+      <Feed.Event key={newsItem.id}>
+        <Feed.Label icon="newspaper" />
+        <Feed.Content>
+          <Feed.Date content={newsItem.humandate} />
+          <Feed.Summary>
+            <span dangerouslySetInnerHTML={{ __html: newsItem.subject }} />
+          </Feed.Summary>
+        </Feed.Content>
+      </Feed.Event>
+    ));
     return list;
   }
 
