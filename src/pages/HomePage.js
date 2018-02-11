@@ -3,8 +3,8 @@ import {
   Segment,
   Grid,
 } from 'semantic-ui-react';
-import Events from '../components/EventsList';
-import News from '../components/NewsList';
+import Events from 'components/EventsList';
+import News from 'components/NewsList';
 
 export default class HomePage extends React.PureComponent {
   render() {

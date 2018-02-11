@@ -1,4 +1,13 @@
 {
   "presets": ["airbnb", "env"],
-  "plugins": ["transform-class-properties"]
+  "plugins": ["transform-class-properties",
+      ["module-resolver", {
+        "root": ["./"],
+        "alias": {
+          "components": "./src/components",
+          "pages": "./src/pages",
+          "ducks": "./src/ducks"
+        }
+      }
+    ]]
 }

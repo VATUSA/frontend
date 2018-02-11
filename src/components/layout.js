@@ -7,8 +7,8 @@ import {
   Visibility,
 } from 'semantic-ui-react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import HomePage from 'pages/HomePage';
 import MainMenu from './MainMenu';
-import HomePage from '../pages/HomePage';
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
