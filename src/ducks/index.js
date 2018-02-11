@@ -4,7 +4,7 @@ import news from './news';
 
 const app = combineReducers({
   events,
-  news
+  news,
 });
 
 export default app;
