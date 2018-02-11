@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card, Feed } from 'semantic-ui-react';
-import { fetchEvents } from '../../ducks/events';
+import { fetchEvents } from 'ducks/events';
 
 class EventsList extends React.Component {
   componentDidMount() {

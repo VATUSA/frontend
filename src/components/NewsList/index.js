@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card, Feed } from 'semantic-ui-react';
-import { fetchNews } from '../../ducks/news';
+import { fetchNews } from 'ducks/news';
 
 class NewsList extends React.Component {
   componentDidMount() {

@@ -6,7 +6,8 @@
         "alias": {
           "components": "./src/components",
           "pages": "./src/pages",
-          "ducks": "./src/ducks"
+          "ducks": "./src/ducks",
+          "sagas": "./src/sagas"
         }
       }
     ]]

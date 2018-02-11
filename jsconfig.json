@@ -8,7 +8,8 @@
     "paths": {
       "components/*": ["components/*"],
       "pages/*": ["pages/*"],
-      "ducks/*": ["ducks/*"]
+      "ducks/*": ["ducks/*"],
+      "sagas/*": ["sagas/*"]
     }
   }
 }
