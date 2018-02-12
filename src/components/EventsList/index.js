@@ -16,7 +16,11 @@ class EventsList extends React.Component {
         <Feed.Label icon="plane" />
         <Feed.Content>
           <Feed.Date content={event.humandate} />
-          <Feed.Summary><span dangerouslySetInnerHTML={{ __html: event.title }} /></Feed.Summary>
+          <Feed.Summary>
+            <a href={event.url}>
+              <span dangerouslySetInnerHTML={{ __html: event.title }} />
+            </a>
+          </Feed.Summary>
         </Feed.Content>
       </Feed.Event>));
     return list;
