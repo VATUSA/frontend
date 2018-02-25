@@ -17,10 +17,10 @@ const FixedMenu = () => (
 );
 
 export default class HomepageLayout extends Component {
-  state = {}
+  state = {};
 
-  hideFixedMenu = () => this.setState({ visible: false })
-  showFixedMenu = () => this.setState({ visible: true })
+  hideFixedMenu = () => this.setState({ visible: false });
+  showFixedMenu = () => this.setState({ visible: true });
 
   render() {
     const { visible } = this.state;
@@ -58,7 +58,6 @@ export default class HomepageLayout extends Component {
               </Container>
             </Segment>
           </Visibility>
-
           <Switch>
             <Route exact path="/" component={HomePage} />
           </Switch>
