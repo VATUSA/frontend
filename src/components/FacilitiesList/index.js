@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Card, Feed } from 'semantic-ui-react';
+import { Dropdown } from 'semantic-ui-react';
 import { fetchFacilities } from '../../ducks/facilities';
 
 class FacilitiesList extends React.Component {
@@ -9,32 +9,11 @@ class FacilitiesList extends React.Component {
     this.props.fetchFacilities();
   }
 
-  renderFacilitiesList() {
+  render() {
     const { facilities } = this.props;
     return facilities.map(facility => (
-      <Feed.Event>
-        <Feed.Label icon="building" />
-        <Feed.Content>
-          <Feed.Summary>{facility.name}</Feed.Summary>
-        </Feed.Content>
-      </Feed.Event>));
-  }
-
-  render() {
-    return (
-      <Card centered fluid>
-        <Card.Content>
-          <Card.Header>
-            Facilities
-          </Card.Header>
-        </Card.Content>
-        <Card.Content>
-          <Feed>
-            {this.renderFacilitiesList()}
-          </Feed>
-        </Card.Content>
-      </Card>
-    );
+      <Dropdown.Item href={facility.url} target="_blank">{facility.name}</Dropdown.Item>
+    ));
   }
 }
 
