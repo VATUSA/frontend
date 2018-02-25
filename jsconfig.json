@@ -1,0 +1,15 @@
+{
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "compilerOptions": {
+    "baseUrl": "src/",
+    "paths": {
+      "components/*": ["components/*"],
+      "pages/*": ["pages/*"],
+      "ducks/*": ["ducks/*"],
+      "sagas/*": ["sagas/*"]
+    }
+  }
+}

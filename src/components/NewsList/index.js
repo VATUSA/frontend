@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card, Feed } from 'semantic-ui-react';
-import { fetchNews } from '../../ducks/news';
+import { fetchNews } from 'ducks/news';
 
 class NewsList extends React.Component {
   componentDidMount() {
@@ -17,7 +17,9 @@ class NewsList extends React.Component {
         <Feed.Content>
           <Feed.Date content={newsItem.humandate} />
           <Feed.Summary>
-            <span dangerouslySetInnerHTML={{ __html: newsItem.subject }} />
+            <a href={newsItem.url}>
+              <span dangerouslySetInnerHTML={{ __html: newsItem.subject }} />
+            </a>
           </Feed.Summary>
         </Feed.Content>
       </Feed.Event>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card, Feed } from 'semantic-ui-react';
-import { fetchEvents } from '../../ducks/events';
+import { fetchEvents } from 'ducks/events';
 
 class EventsList extends React.Component {
   componentDidMount() {
@@ -16,7 +16,11 @@ class EventsList extends React.Component {
         <Feed.Label icon="plane" />
         <Feed.Content>
           <Feed.Date content={event.humandate} />
-          <Feed.Summary><span dangerouslySetInnerHTML={{ __html: event.title }} /></Feed.Summary>
+          <Feed.Summary>
+            <a href={event.url}>
+              <span dangerouslySetInnerHTML={{ __html: event.title }} />
+            </a>
+          </Feed.Summary>
         </Feed.Content>
       </Feed.Event>));
     return list;

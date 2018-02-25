@@ -4,7 +4,7 @@ import logo from '../../static/logo-light.png'; // Light preferred, dark usable
 
 export default () => (
   <Container>
-    <Menu.Item><Image size="small" src={ logo } /></Menu.Item>
+    <Menu.Item><Image size="small" src={logo} /></Menu.Item>
     <Menu.Item as="a" active>Home</Menu.Item>
     <Menu.Item as="a">Facilities</Menu.Item>
     <Menu.Item as="a">Forums</Menu.Item>
