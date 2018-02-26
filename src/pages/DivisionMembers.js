@@ -3,9 +3,9 @@ import {
   Segment,
   Grid, Dropdown,
 } from 'semantic-ui-react';
-import Facilities from 'components/FacilitiesList';
+import Facilities from '../components/FacilitiesList';
 
-export default class DivisonMembers extends React.PureComponent {
+export default class DivisionMembers extends React.PureComponent {
   render() {
     return (
       <Segment basic>

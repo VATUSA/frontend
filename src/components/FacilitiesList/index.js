@@ -12,7 +12,7 @@ class FacilitiesList extends React.Component {
   render() {
     const { facilities } = this.props;
     return facilities.map(facility => (
-      <Dropdown.Item href={facility.url} target="_blank">{facility.name}</Dropdown.Item>
+      <Dropdown.Item href={facility.url} target="_blank">{facility.id} - {facility.name}</Dropdown.Item>
     ));
   }
 }

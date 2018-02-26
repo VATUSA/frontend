@@ -7,7 +7,8 @@ import {
   Visibility,
 } from 'semantic-ui-react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import HomePage from 'pages/HomePage';
+import HomePage from '../pages/HomePage';
+import DivisionMembers from '../pages/DivisionMembers';
 import MainMenu from './MainMenu';
 
 const FixedMenu = () => (
@@ -60,6 +61,7 @@ export default class HomepageLayout extends Component {
           </Visibility>
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route path="/divison/members" component={DivisionMembers} />
           </Switch>
         </div>
       </BrowserRouter>

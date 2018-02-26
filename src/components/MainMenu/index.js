@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Image, Menu, Button, Dropdown } from 'semantic-ui-react';
 import logo from '../../static/logo-light.png'; // Light preferred, dark usable
-import Facilities from 'components/FacilitiesList';
+import Facilities from '../FacilitiesList';
 
 export default class MainMenu extends React.PureComponent {
   onLoginButtonClick = () => {
