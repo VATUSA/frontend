@@ -9,7 +9,8 @@
       "components/*": ["components/*"],
       "pages/*": ["pages/*"],
       "ducks/*": ["ducks/*"],
-      "sagas/*": ["sagas/*"]
+      "sagas/*": ["sagas/*"],
+      "utils/*": ["utils/*"]
     }
   }
 }
