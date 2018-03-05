@@ -5,7 +5,6 @@ sudo: required
 services:
 - docker
 script:
-- npm install
 - npx poi build
 - docker build -t vatusa/frontend .
 after_success:
