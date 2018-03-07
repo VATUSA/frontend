@@ -4,20 +4,30 @@ import { connect } from 'react-redux';
 import { Dropdown } from 'semantic-ui-react';
 import { fetchFacilities } from '../../ducks/facilities';
 
-class FacilitiesList extends React.Component {
+class FacilitiesSelection extends React.Component {
   componentDidMount() {
     this.props.fetchFacilities();
   }
 
-  render() {
+  renderFacilities() {
     const { facilities } = this.props;
-    return facilities.map(facility => (
-      <Dropdown.Item href={facility.url} target="_blank" key={facility.id}>{facility.id} - {facility.name}</Dropdown.Item>
+    facilities.map(facility => (
+      <Dropdown.Item key={facility.id}>{facility.id} - {facility.name}</Dropdown.Item>
     ));
+  }
+
+  render() {
+    return (
+      <Dropdown text="Facilities" simple item>
+        <Dropdown.Menu>
+          {this.renderFacilities()}
+        </Dropdown.Menu>
+      </Dropdown>
+    );
   }
 }
 
-FacilitiesList.propTypes = {
+FacilitiesSelection.propTypes = {
   fetchFacilities: PropTypes.func.isRequired,
   facilities: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
@@ -27,7 +37,7 @@ FacilitiesList.propTypes = {
   })),
 };
 
-FacilitiesList.defaultProps = {
+FacilitiesSelection.defaultProps = {
   facilities: [],
 };
 
@@ -39,4 +49,4 @@ const mapDispatchToProps = {
   fetchFacilities,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FacilitiesList);
+export default connect(mapStateToProps, mapDispatchToProps)(FacilitiesSelection);

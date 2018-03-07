@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Image, Menu, Button, Dropdown } from 'semantic-ui-react';
 import logo from '../../static/logo-light.png'; // Light preferred, dark usable
 import Facilities from '../FacilitiesList';
+import { Link } from 'react-router-dom';
 
 export default class MainMenu extends React.PureComponent {
   onLoginButtonClick = () => {
@@ -12,7 +13,7 @@ export default class MainMenu extends React.PureComponent {
     return (
       <Container>
         <Menu.Item><Image size="small" src={logo} /></Menu.Item>
-        <Menu.Item as="a" active>Home</Menu.Item>
+        <Menu.Item as={Link} to="/" exact="true" active>Home</Menu.Item>
         <Dropdown item text="Facilities">
           <Dropdown.Menu>
             <Facilities />
@@ -24,7 +25,7 @@ export default class MainMenu extends React.PureComponent {
             <Dropdown.Item as="a">Policies</Dropdown.Item>
             <Dropdown.Item as="a">Computer Based Training (CBT)</Dropdown.Item>
             <Dropdown.Item as="a">Events Calendar</Dropdown.Item>
-            <Dropdown.Item as="a">Members and Staff</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/division/members">Members and Staff</Dropdown.Item>
             <Dropdown.Item as="a">Solo Certifications</Dropdown.Item>
             <Dropdown.Item as="a">ACE Team</Dropdown.Item>
           </Dropdown.Menu>
