@@ -10,17 +10,19 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from 'pages/HomePage';
 import MainMenu from './MainMenu';
 
-const FixedMenu = () => (
-  <Menu fixed="top" size="large">
-    <MainMenu />
-  </Menu>
-);
-
 export default class HomepageLayout extends Component {
   state = {};
 
   hideFixedMenu = () => this.setState({ visible: false });
   showFixedMenu = () => this.setState({ visible: true });
+
+  renderFixedMenu() {
+    return (
+      <Menu fixed="top" size="large">
+        <MainMenu />
+      </Menu>
+    );
+  }
 
   render() {
     const { visible } = this.state;
@@ -28,7 +30,7 @@ export default class HomepageLayout extends Component {
     return (
       <BrowserRouter>
         <div>
-          { visible ? <FixedMenu /> : null }
+          { visible ? this.renderFixedMenu() : null }
 
           <Visibility
             onBottomPassed={this.showFixedMenu}
