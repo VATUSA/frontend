@@ -8,7 +8,7 @@ export default function* fetchToken() {
 
     yield call(request.get, '/v2/auth/info');
 
-    window.sessionStorage.setItem('info', response.data);
+    window.sessionStorage.setItem('info', JSON.stringify(response.data));
   } catch (e) {
     // TODO: Do something on failure maybe?
   }
