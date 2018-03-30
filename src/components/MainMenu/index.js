@@ -1,10 +1,34 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container, Image, Menu, Button } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 import logo from '../../static/logo-light.png'; // Light preferred, dark usable
 
-export default class MainMenu extends React.PureComponent {
+class MainMenu extends React.PureComponent {
+  static propTypes = {
+    authInfo: PropTypes.shape(),
+  }
+
+  static defaultProps = {
+    authInfo: null,
+  }
+
   onLoginButtonClick = () => {
     window.location.href = 'https://login.vatusa.net';
+  }
+
+  renderLoginButton() {
+    const { authInfo } = this.props;
+
+    if (!authInfo) {
+      return (
+        <Button as="a" primary onClick={this.onLoginButtonClick}>Log in</Button>
+      );
+    }
+
+    return (
+      <span>{`Welcome back ${authInfo.fname}`}</span>
+    );
   }
 
   render() {
@@ -21,10 +45,16 @@ export default class MainMenu extends React.PureComponent {
         <Menu.Item as="a">Support</Menu.Item>
         <Menu.Menu position="right">
           <Menu.Item className="item">
-            <Button as="a" primary onClick={this.onLoginButtonClick}>Log in</Button>
+            {this.renderLoginButton()}
           </Menu.Item>
         </Menu.Menu>
       </Container>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  authInfo: state.auth.info,
+});
+
+export default connect(mapStateToProps)(MainMenu);
